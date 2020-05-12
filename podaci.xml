@@ -3,8 +3,8 @@
 <?xml-stylesheet type="text/xsl" href="pretvorba.xsl"?>
 
 <podaci>
-    <grad>
-        <ime handle="Mikena" unesco="DA">Mikena</ime>
+    <grad handle="Mycenae">
+        <ime unesco="DA">Mikena</ime>
         <drzava>Grčka</drzava>
         <regija>Peloponez</regija>
         <kultura>Egejska</kultura>
@@ -22,8 +22,8 @@
         </znamenitosti>
     </grad>
 
-    <grad>
-        <ime handle="Kartaga" unesco="DA">Kartaga</ime>
+    <grad handle="Carthage">
+        <ime unesco="DA">Kartaga</ime>
         <drzava>Tunis</drzava>
         <regija>Tunis</regija>
         <kultura>Fenička</kultura>
@@ -38,8 +38,8 @@
         </znamenitosti>
     </grad>
 
-    <grad>
-        <ime handle="Babilon" unesco="DA">Babilon</ime>
+    <grad handle="Babylon">
+        <ime unesco="DA">Babilon</ime>
         <drzava>Irak</drzava>
         <regija>Mezopotamija</regija>
         <kultura>Akadska</kultura>
@@ -51,8 +51,8 @@
         </znamenitosti>
     </grad>
 
-    <grad>
-        <ime handle="Uruk" unesco="DA">Uruk</ime>
+    <grad handle="Uruk">
+        <ime unesco="DA">Uruk</ime>
         <drzava>Irak</drzava>
         <regija>Mezopotamija</regija>
         <kultura>Sumerska</kultura>
@@ -64,8 +64,8 @@
         </znamenitosti>
     </grad>
 
-    <grad>
-        <ime handle="Memfis" unesco="DA">Memfis</ime>
+    <grad handle="Memphis,_Egypt">
+        <ime unesco="DA">Memfis</ime>
         <drzava>Egipat</drzava>
         <regija>Donji Egipat</regija>
         <kultura>Egipatska</kultura>

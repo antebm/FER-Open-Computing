@@ -1,9 +1,10 @@
 <!ELEMENT podaci (grad)*>
+<!ATTLIST grad handle CDATA #REQUIRED>
 <!ELEMENT grad (ime, drzava, regija, kultura, osnovan, znamenitosti)>
 
 <!ELEMENT ime (#PCDATA)>
 <!ATTLIST ime unesco (DA | NE) #REQUIRED>
-<!ATTLIST ime handle CDATA #REQUIRED>
+
 <!ELEMENT drzava (#PCDATA)>
 <!ELEMENT regija (#PCDATA)>
 <!ELEMENT kultura (#PCDATA)>

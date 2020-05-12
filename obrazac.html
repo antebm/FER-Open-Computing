@@ -30,7 +30,7 @@
     <div class="container">
         <h1 class="l-heading"><span class="text-primary">Potraži</span> grad</h1>
         <p>U obrascu popuni podatke koji te zanimaju</p>
-        <form action="pretraga.php" method="POST">
+        <form action="pretraga.php" method="post">
             <div class="form-group">
                 <label for="ime">Ime grada</label>
                 <input type="text" name="ime" id="ime">
@@ -53,31 +53,31 @@
           </div>
           <div class="form-group checkbox-form">
             <label for="tipZnemenitosti">Tip znamenitosti</label><br/>
-            <input type="checkbox" id="gradjevina" name="gradjevina" value="gradjevina">
+            <input type="checkbox" id="gradjevina" name="tipZnamenitosti" value="gradjevina">
             <label for="gradjevina">Građevina</label><br/>
-            <input type="checkbox" id="portal" name="portal" value="portal">
+            <input type="checkbox" id="portal" name="tipZnamenitosti" value="portal">
             <label for="portal">Portal</label><br/>
-            <input type="checkbox" id="zidine" name="zidine" value="zidine">
+            <input type="checkbox" id="zidine" name="tipZnamenitosti" value="zidine">
             <label for="zidine">Zidine</label><br/>
-            <input type="checkbox" id="luka" name="luka" value="luka">
+            <input type="checkbox" id="luka" name="tipZnamenitosti" value="luka">
             <label for="luka">Luka</label><br/>  
           </div>
 
           <div class="form-group radio-form">
             <label for="unesco">Na UNESCO listi svjetske baštine?</label>
             <div class="radio-choice">
-              <input  type="radio" id="da" name="gender" value="da">
+              <input  type="radio" id="da" name="unesco" value="da">
               <label  for="da">Da</label>           
             </div>
             <div class="radio-choice">
-              <input  type="radio" id="ne" name="gender" value="ne">
+              <input  type="radio" id="ne" name="unesco" value="ne">
               <label  for="ne">Ne</label>
             </div>
           </div>
 
           <div class="form-group">
             <label for="razdoblje">Povijesno razdoblje?</label>
-            <select id="razdoblje" multiple>
+            <select name="razdoblje" id="razdoblje" multiple>
               <option value="5">5.tisućljeće pr.Kr.</option>
               <option value="4">4.tisućljeće pr.Kr.</option>
               <option value="3">3.tisućljeće pr.Kr.</option>
