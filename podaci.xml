@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE podaci SYSTEM "gramatika.dtd">
+<?xml-stylesheet type="text/xsl" href="pretvorba.xsl"?>
+
+<podaci>
+    <grad>
+        <ime handle="Mikena" unesco="DA">Mikena</ime>
+        <drzava>Grčka</drzava>
+        <regija>Peloponez</regija>
+        <kultura>Egejska</kultura>
+        <osnovan era="pr.Kr.">2000</osnovan>
+        <znamenitosti>
+        <znamenitost>
+            <imeZnamenitosti tipZnamenitosti="portal">Lavlja vrata</imeZnamenitosti>
+        </znamenitost>
+        <znamenitost>
+            <imeZnamenitosti tipZnamenitosti="gradjevina">Atrejeva riznica</imeZnamenitosti>
+        </znamenitost>
+        <znamenitost>
+            <imeZnamenitosti tipZnamenitosti="zidine">Kiklopske zidine</imeZnamenitosti>
+        </znamenitost>
+        </znamenitosti>
+    </grad>
+
+    <grad>
+        <ime handle="Kartaga" unesco="DA">Kartaga</ime>
+        <drzava>Tunis</drzava>
+        <regija>Tunis</regija>
+        <kultura>Fenička</kultura>
+        <osnovan era="pr.Kr.">814</osnovan>
+        <znamenitosti>
+         <znamenitost>
+            <imeZnamenitosti tipZnamenitosti="gradjevina">Rimski amfiteatar</imeZnamenitosti>
+            </znamenitost>
+            <znamenitost>
+             <imeZnamenitosti tipZnamenitosti="luka">Vojna Luka Koton Kartage</imeZnamenitosti>
+            </znamenitost>
+        </znamenitosti>
+    </grad>
+
+    <grad>
+        <ime handle="Babilon" unesco="DA">Babilon</ime>
+        <drzava>Irak</drzava>
+        <regija>Mezopotamija</regija>
+        <kultura>Akadska</kultura>
+        <osnovan era="pr.Kr.">2400</osnovan>
+        <znamenitosti>
+            <znamenitost>
+            <imeZnamenitosti tipZnamenitosti="portal">Ištarina vrata</imeZnamenitosti>
+            </znamenitost>
+        </znamenitosti>
+    </grad>
+
+    <grad>
+        <ime handle="Uruk" unesco="DA">Uruk</ime>
+        <drzava>Irak</drzava>
+        <regija>Mezopotamija</regija>
+        <kultura>Sumerska</kultura>
+        <osnovan era="pr.Kr.">4000</osnovan>
+        <znamenitosti>
+            <znamenitost>
+             <imeZnamenitosti tipZnamenitosti="gradjevina">Hram božice Inanna</imeZnamenitosti>
+            </znamenitost>
+        </znamenitosti>
+    </grad>
+
+    <grad>
+        <ime handle="Memfis" unesco="DA">Memfis</ime>
+        <drzava>Egipat</drzava>
+        <regija>Donji Egipat</regija>
+        <kultura>Egipatska</kultura>
+        <osnovan era="pr.Kr.">3500</osnovan>
+        <znamenitosti>
+            <znamenitost>
+                <imeZnamenitosti tipZnamenitosti="gradjevina">Hram božice Hator</imeZnamenitosti>
+            </znamenitost>
+        </znamenitosti>
+    </grad>
+</podaci>
