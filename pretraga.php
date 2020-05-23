@@ -48,6 +48,8 @@ $queryResult = $filter->upit();
                 <th>Sažetak</th>
                 <th>Koordinate (Wiki)</th>
                 <th>Koordinate(Nominatim)</th>
+                <th>Vrijeme Pristupa</th>
+                <th>Novi rezultat</th>
             </tr>
             <?php foreach ($queryResult as $element) {
             ?>
@@ -66,7 +68,8 @@ $queryResult = $filter->upit();
                 <td><?php echo $filter->getWikiExtract($element->getAttribute('handle')); ?></td>
                 <td><?php echo $filter->getWikiCoordinates($element->getAttribute('handle')); ?></td>
                 <td><?php echo $filter->getNominatimCoordinates($filter->getWikiAdress($element->getAttribute('handle'))); ?></td>
-               
+                <td><?php echo substr($filter->getTimeElapsed(), 0, 5) . ' s'; ?></td>
+                <td><?php echo $filter->getWikiEpoch($element->getAttribute('handle')); ?></td>
             </tr>
             <?php
             }

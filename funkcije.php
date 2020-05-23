@@ -8,6 +8,9 @@ class Filter{
     private $dom;
     private $xpath;
     private $wikiLink;
+    private $wikiContent;
+    private $wikiDecoded;
+    private $timeElapsed;
 
     function __construct(){
         $this->dom = new DOMDocument();
@@ -29,30 +32,22 @@ class Filter{
     
     public function getWikiImage($handle){
         $link = $this->wikiLink . $handle;
-		$content = @file_get_contents($link);
-		$encoded = utf8_encode($content);
-		$decoded = json_decode($encoded, true);
+        $start = microtime(true);
+        $this->wikiContent = @file_get_contents($link);
+        $this->timeElapsed = microtime(true) - $start;
+		$encoded = utf8_encode($this->wikiContent);
+		$this->wikiDecoded = json_decode($encoded, true);
 		
-        return $decoded['thumbnail']['source'];
+        return $this->wikiDecoded['thumbnail']['source'];
     }
 
-    public function getWikiCoordinates($handle){
-        $link = $this->wikiLink . $handle;
-		$content = @file_get_contents($link);
-		$encoded = utf8_encode($content);
-		$decoded = json_decode($encoded, true);
-        
-        $result = $decoded['coordinates']['lat'] . ' <br/> ' . $decoded['coordinates']['lon'];
+    public function getWikiCoordinates($handle){   
+        $result = $this->wikiDecoded['coordinates']['lat'] . ' <br/> ' . $this->wikiDecoded['coordinates']['lon'];
         return $result;
     }
 
     public function getWikiExtract($handle){
-        $link = $this->wikiLink . $handle;
-		$content = @file_get_contents($link);
-		$encoded = utf8_encode($content);
-        $decoded = json_decode($encoded, true);
-        
-        $result = substr($decoded['extract'],0, 80) . '...';
+        $result = substr($this->wikiDecoded['extract'],0, 80) . '...';
         return $result;
     }
 
@@ -79,15 +74,51 @@ class Filter{
 
         $subject = json_encode($result["query"]["pages"]);
         $pattern = "/location = \[\[([a-zA-Z\s]*)\]\],\s*\[\[([a-zA-Z\s]*)\]\],\s*\[\[([a-zA-Z\s]*)\]\]/";
+       
+        preg_match($pattern, $output, $matches);
+        if(array_key_exists(1, $matches)){
+            return $matches[1] . ', ' . $matches[2] . ', ' . $matches[3];
+        }
+        return "No data";
+    }
+
+    public function getWikiEpoch($handle){
+        $endPoint = "https://en.wikipedia.org/w/api.php";
+        $params = [
+         "action" => "query",
+          "prop" => "revisions",
+          "rvprop" => "content",
+          "rvsection" => "0",
+          "titles" => $handle,
+          "format" => "json"
+        ];
+
+        $url = $endPoint . "?" . http_build_query( $params );
+
+        $ch = curl_init( $url );
+        curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+        $output = curl_exec( $ch );
+        curl_close( $ch );
+        
+        $result = json_decode( $output, true );
+
+        $subject = json_encode($result["query"]["pages"]);
+        $pattern = "/epochs = \[\[([\w*\s]*)/";
 
         preg_match($pattern, $output, $matches);
-       
-        return $matches;
+        if(array_key_exists(1, $matches)){
+            return $matches[1];
+        }
+        return "No data";
     }
 
     public function getNominatimCoordinates($adress){
 
-        return "TODO:";
+        return $adress . "<br/> TODO: get coord";
+    }
+
+    public function getTimeElapsed(){
+        return $this->timeElapsed;
     }
 
     public function upit() {
