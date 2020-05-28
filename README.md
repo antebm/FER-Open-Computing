@@ -1,4 +1,5 @@
 # FER Open Computing Course
+Project should work on any stack with PHP interpreter
 
 ### 1st Exercise: HTML and CSS
 >basic structure of web page, and search form
@@ -14,3 +15,8 @@
 >MediaWiki Action API,
 >Wikimedia REST API,
 >OpenStreetMap Nominatim,
+
+### 5th Exercise: 
+>Javascript
+>AJAX
+>XMLHttpRequest

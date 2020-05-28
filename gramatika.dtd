@@ -1,6 +1,6 @@
 <!ELEMENT podaci (grad)*>
 <!ATTLIST grad handle CDATA #REQUIRED>
-<!ELEMENT grad (ime, drzava, regija, kultura, osnovan, znamenitosti)>
+<!ELEMENT grad (ime, drzava, regija, kultura, osnovan, znamenitosti, koordinate)>
 
 <!ELEMENT ime (#PCDATA)>
 <!ATTLIST ime unesco (DA | NE) #REQUIRED>
@@ -11,6 +11,7 @@
 <!ELEMENT osnovan (#PCDATA)>
 <!ELEMENT znamenitosti (znamenitost)*>
 <!ATTLIST osnovan era (pr.Kr. | N.E.) #REQUIRED>
+<!ELEMENT koordinate (#PCDATA)>
 
 <!ELEMENT znamenitost (imeZnamenitosti)>
 <!ELEMENT imeZnamenitosti (#PCDATA)>

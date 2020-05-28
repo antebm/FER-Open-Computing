@@ -20,6 +20,7 @@
             <imeZnamenitosti tipZnamenitosti="zidine">Kiklopske zidine</imeZnamenitosti>
         </znamenitost>
         </znamenitosti>
+        <koordinate>37.72919415,22.754428825393703</koordinate>
     </grad>
 
     <grad handle="Carthage">
@@ -36,6 +37,7 @@
              <imeZnamenitosti tipZnamenitosti="luka">Vojna Luka Koton Kartage</imeZnamenitosti>
             </znamenitost>
         </znamenitosti>
+        <koordinate>36.851627,10.330441</koordinate>
     </grad>
 
     <grad handle="Babylon">
@@ -49,6 +51,7 @@
             <imeZnamenitosti tipZnamenitosti="portal">Ištarina vrata</imeZnamenitosti>
             </znamenitost>
         </znamenitosti>
+        <koordinate>32.54211285,44.42127383323714</koordinate>
     </grad>
 
     <grad handle="Uruk">
@@ -62,6 +65,7 @@
              <imeZnamenitosti tipZnamenitosti="gradjevina">Hram božice Inanna</imeZnamenitosti>
             </znamenitost>
         </znamenitosti>
+        <koordinate>31.3216128,45.638327</koordinate>
     </grad>
 
     <grad handle="Memphis,_Egypt">
@@ -75,5 +79,6 @@
                 <imeZnamenitosti tipZnamenitosti="gradjevina">Hram božice Hator</imeZnamenitosti>
             </znamenitost>
         </znamenitosti>
+        <koordinate>29.8544582,31.25928716961478</koordinate>
     </grad>
 </podaci>
