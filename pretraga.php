@@ -44,6 +44,9 @@ $queryResult = $filter->upit();
     <h3>Više o...</h3>
   </div>
   <div id='mapid'></div>
+  <div class="additional-info" id="wikiTitle">
+      <h3>Wikipedia Article will render here...</h3>
+    </div>
   </div>
   <div class="container" style="margin-left:2rem;">
         <h2>Gradovi</h2>
@@ -83,7 +86,7 @@ $queryResult = $filter->upit();
 <!--                <td><?php echo $filter->getNominatimCoordinates($filter->getWikiAdress($element->getAttribute('handle'))); ?></td> -->
 <!--                <td><?php echo substr($filter->getTimeElapsed(), 0, 5) . ' s'; ?></td>  -->
 <!--                <td><?php echo $filter->getWikiEpoch($element->getAttribute('handle')); ?></td> -->
-                <td><button type="button" onclick="loadDetails('<?php echo $element->getElementsByTagname('ime')->item(0)->nodeValue;?>', '<?php echo $filter->getWikiCoordinates($element->getAttribute('handle'));?>', '<?php echo $element->getElementsByTagname('koordinate')->item(0)->nodeValue;?>')">Više o...</button> </td>
+                <td><button type="button" onclick="loadDetails('<?php echo $element->getElementsByTagname('ime')->item(0)->nodeValue;?>', '<?php echo $filter->getWikiCoordinates($element->getAttribute('handle'));?>', '<?php echo $element->getElementsByTagname('koordinate')->item(0)->nodeValue;?>', '<?php echo$element->getAttribute('handle'); ?>')">Više o...</button> </td>
             </tr>
             <?php
             }

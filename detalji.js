@@ -19,8 +19,19 @@ function obnoviBoju(row) {
     row.style.color = TableTextColor;
 
 }
+function loadWikiHandle(handle){
+    var xhttp = new XMLHttpRequest();
+ 
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("wikiTitle").innerHTML = this.responseText;
+        }
+    };
 
-function loadDetails(ime, wiki, nomina) {
+    xhttp.open("GET", "https://en.wikipedia.org/api/rest_v1/page/html/" + handle, true);
+    xhttp.send();
+}
+function loadDetails(ime, wiki, nomina, handle) {
     var xhttp = new XMLHttpRequest();
     console.log(ime);
     console.log(wiki);
@@ -37,6 +48,7 @@ function loadDetails(ime, wiki, nomina) {
     xhttp.send();
     // document.getElementById('mapid').innerHTML = "<div id='map' style='width: 100%; height: 100%;'></div>";
     map(wikiCoord[0], wikiCoord[1], nominaCoord[0], nominaCoord[1], ime);
+    loadWikiHandle(handle);
 }
 
 function map(lat, lon, lat1, lon1, name) {

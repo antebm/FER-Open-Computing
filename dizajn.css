@@ -275,6 +275,9 @@
   margin: 1 rem;
   float: left;
 }
+#wikiTitle{
+  border:none;
+}
 #mapid {
   float: left;
   height: 30rem;
